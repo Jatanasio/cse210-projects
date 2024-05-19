@@ -5,20 +5,46 @@ using System.IO;
 public class Journal
 {
     private List<Entry> entries;
+    private int consecutiveDays;
 
     public Journal()
     {
         entries = new List<Entry>();
+        consecutiveDays = 0;
     }
 
     public void AddEntry(Entry entry)
     {
         entries.Add(entry);
+        consecutiveDays++;
     }
 
     public List<Entry> GetEntries()
     {
         return entries;
+    }
+
+    public double GetAverageEntriesPerWeek()
+    {
+        if (entries.Count == 0)
+            return 0;
+
+        TimeSpan totalTimeSpan = DateTime.Now - DateTime.Parse(entries[0].Date);
+        double totalDays = totalTimeSpan.TotalDays;
+
+        double totalWeeks = totalDays / 7;
+
+        return entries.Count / totalWeeks;
+    }
+
+    public int GetConsecutiveDays()
+    {
+        return consecutiveDays;
+    }
+
+    public void ResetConsecutiveDays()
+    {
+        consecutiveDays = 0;
     }
 
     public void SaveToFile(string filePath)
