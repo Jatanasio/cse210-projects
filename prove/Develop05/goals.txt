@@ -1,0 +1,3 @@
+1150
+Simple Goal,marathon,1000,True
+Daily Goal,lift,50,3
