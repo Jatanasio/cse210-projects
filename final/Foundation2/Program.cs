@@ -1,5 +1,7 @@
 using System;
 
+using System;
+
 public class Program
 {
     public static void Main()
@@ -23,6 +25,7 @@ public class Program
         order2.AddProduct(product3);
         order2.AddProduct(product4);
 
+        // Display order details
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine($"Total Cost: ${order1.GetTotalCost():0.00}\n");

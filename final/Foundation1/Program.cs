@@ -1,5 +1,8 @@
 using System;
 
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
     public static void Main()
@@ -28,14 +31,14 @@ public class Program
 
         foreach (var video in videos)
         {
-            Console.WriteLine($"Title: {video.Title}");
-            Console.WriteLine($"Author: {video.Author}");
-            Console.WriteLine($"Length: {video.Length} seconds");
+            Console.WriteLine($"Title: {video.GetTitle()}");
+            Console.WriteLine($"Author: {video.GetAuthor()}");
+            Console.WriteLine($"Length: {video.GetLength()} seconds");
             Console.WriteLine($"Number of Comments: {video.GetCommentCount()}");
 
             foreach (var comment in video.GetComments())
             {
-                Console.WriteLine($"Commenter: {comment.CommenterName} - {comment.Text}");
+                Console.WriteLine($"Commenter: {comment.GetCommenterName()} - {comment.GetText()}");
             }
             Console.WriteLine();
         }
