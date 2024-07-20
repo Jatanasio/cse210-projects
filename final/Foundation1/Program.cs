@@ -10,12 +10,12 @@ public class Program
         List<Video> videos = new List<Video>();
 
         Video video1 = new Video("Learn C# in 10 Minutes", "CodeAcademy", 600);
-        Video video2 = new Video("Top 10 C# Tips", "ProgrammingGuru", 900);
-        Video video3 = new Video("Advanced C# Techniques", "ExpertCoder", 1200);
+        Video video2 = new Video("Top 10 C# Tips", "ProgrammingGuru", 500);
+        Video video3 = new Video("Advanced C# Techniques", "ExpertCoder", 1400);
 
-        video1.AddComment(new Comment("Alice", "Great tutorial!"));
-        video1.AddComment(new Comment("Bob", "Very helpful, thanks!"));
-        video1.AddComment(new Comment("Charlie", "Awesome video!"));
+        video1.AddComment(new Comment("James", "Great tutorial!"));
+        video1.AddComment(new Comment("Bill", "Very helpful, thanks!"));
+        video1.AddComment(new Comment("Charles", "Awesome video!"));
 
         video2.AddComment(new Comment("David", "Loved the tips."));
         video2.AddComment(new Comment("Eva", "Really useful."));

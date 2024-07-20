@@ -12,10 +12,10 @@ public class Program
         Customer customer1 = new Customer("John Doe", address1);
         Customer customer2 = new Customer("Jane Smith", address2);
 
-        Product product1 = new Product("Widget", "W123", 3.00, 5);
-        Product product2 = new Product("Gadget", "G456", 10.00, 2);
-        Product product3 = new Product("Doodad", "D789", 7.50, 4);
-        Product product4 = new Product("Thingamajig", "T012", 15.00, 1);
+        Product product1 = new Product("Nintendo Switch", "N123", 100.00, 1);
+        Product product2 = new Product("Xbox", "X456", 100.00, 2);
+        Product product3 = new Product("Playstation", "P789", 125.50, 1);
+        Product product4 = new Product("Elden Ring", "T012", 15.00, 1);
 
         Order order1 = new Order(customer1);
         order1.AddProduct(product1);
